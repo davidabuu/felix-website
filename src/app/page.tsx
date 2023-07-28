@@ -1,13 +1,32 @@
-import React from "react";
+"use client";
+
+import React, { useEffect } from "react";
 import Navbar from "./components/Navbar";
-import Intro from "./components/Intro";
-const LandingPage = () => {
+import SlideShow from "./components/SlideShow";
+import "aos/dist/aos.css"; // Import the AOS CSS file
+import AOS from "aos"; // Import the AOS libra
+import ServicesPage from "./components/ServicePage";
+import Footer from "./components/Footer";
+import About from "./components/About";
+const Page = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
-    <div className=" bg-color text-white">
+    <div>
       <Navbar />
-      <Intro />
+      {/* <div>
+        <SlideShow />
+      </div>
+      <div id="about">
+        <About />
+      </div>
+      <div id="services">
+        <ServicesPage />
+      </div>
+      <Footer /> */}
     </div>
   );
 };
 
-export default LandingPage;
+export default Page;

@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 html {
   scroll-behavior: smooth;
 }
@@ -12,31 +11,81 @@ html {
     box-sizing: border-box;
   }
 }
-body{
-  font-style: italic;
-}
-/* ul li {
-    @apply px-3 cursor-pointer hover:text-blue-400;
-  } */
+ul li {
+    @apply px-3 cursor-pointer hover:text-[#0a192f];
+  }
+
+  .nav-list a{
+    list-style: none !important;
+    color: #fff !important;
+    text-decoration: none;
+   
+  }
+  .nav-list a:hover{
+    color: #07D8C7 !important;
+  }
+  .nav-list{
+    transform: translateY(3px) !important;
+  }
 .img-bg {
-  background: linear-gradient(0deg, transparent, rgba(9, 10, 10, 0.605)),
-    url("/pic2.jpg");
-  object-fit: cover;
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
-  background-position: center;
+    background: linear-gradient(0deg, transparent, rgba(0, 0, 0, 0.6)),
+      url("/pic.jpg");
+    object-fit: contain;
+    background-repeat: no-repeat;
+    background-size: contain;
+    overflow: hidden;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+  }
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+
+.carousel-control-prev-icon, .carousel-control-next-icon{
+  border: 3px solid white;
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 30px;
+  font-weight: bolder !important;
+}
+
+@media(max-width:500px){
+  .carousel-control-prev-icon, .carousel-control-next-icon{
+    width: 35px !important;
+    height: 25px !important;
+    border-radius: 45% !important;
+  }
+}
+
+
+.black-overlay {
+  position: relative !important;
+}
+
+.black-overlay::after {
+  content: "" !important;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5) !important; /* Adjust the alpha value to control the darkness of the overlay */
 }
-.text-shadow {
-  text-shadow: 2px 2px 4px rgba(239, 6, 6, 0.4);
+/* styles.css */
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
-.bg-color {
-  background-color: #191a1c;
+.fade-in.active {
+  opacity: 1;
 }
 
-.border{
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+@media(max-width:900px){
+  #fold{
+    height: 700vh !important;
+    color: red !important;
+  }
 }
