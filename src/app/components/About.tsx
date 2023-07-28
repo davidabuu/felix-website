@@ -4,7 +4,7 @@ const About: React.FC = () => {
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row">
           <div className="md:w-1/2">
-            <h2 className="text-4xl font-bold mb-8">WHAT WE'RE ABOUT</h2>
+            <h2 className="text-4xl font-bold mb-8">WHAT WE&apos;RE ABOUT</h2>
             <p>
               Mexadu Concepts Nig. Ltd is a dynamic and result oriented company
               that has proffred solutions to many companies, Industries,
